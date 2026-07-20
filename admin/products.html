@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Catálogo de productos</title>
+    <link rel="stylesheet" href="../styles/styles.css">
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+</head>
+
+<body>
+    <script>
+        const role = localStorage.getItem('userRole');
+        if (role !== 'admin') {
+            alert("Acceso denegado");
+            window.location.href = "../login.html";
+        }
+    </script>
+
+    <header>
+        <div class="header-container">
+            <img class="logo" src="../img/logo.png" alt="logo">
+            <div class="nav-left">
+                <a href="../login.html">Ingresar</a>
+                <a href="../carrito.html">Carrito</a>
+            </div>
+            <div class="nav-center">
+                <input id="input-search-products" type="text" placeholder="Buscar productos">
+                <nav class="nav-header">
+                    <ul>
+                        <li><a href="../perros.html">Perros</a></li>
+                        <li><a href="../gatos.html">Gatos</a></li>
+                        <li><a href="../ofertas.html">Ofertas</a></li>
+                        <li><a href="../contact.html" class="nav-contacto">Contacto</a></li>
+                    </ul>
+                </nav>
+            </div>
+        </div>
+    </header>
+    <main class="container">
+        <p>Lista de productos</p>
+        <table>
+            <thead>
+                <tr>
+                    <th>ID</th>
+                    <th>Logo</th>
+                    <th>Nombre</th>
+                    <th>Precio</th>
+                    <th>Categoria</th>
+                    <th>Stock</th>
+                    <th>Opciones</th>
+                    <th class="modificar"></th>
+                </tr>
+            </thead>
+            <tbody id="product-list">
+
+            </tbody>
+        </table>
+
+        <button id="btn-add-product" onclick="window.location.href='crear-producto.html'">Añadir Producto</button>
+
+    </main>
+    <footer>
+        <p>&copy; 2025 Tienda de Mascotas. Todos los derechos reservados.</p>
+        <a href="../contact.html">Contacto</a>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+    
+    <script src="../scripts/api.js"></script>
+    <script src="../scripts/product.js"></script>
+</body>
+
+</body>
+
+</html>

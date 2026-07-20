@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Editar productos</title>
+    <link rel="stylesheet" href="../styles/styles.css">
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+</head>
+
+<body>
+    <header>
+        <div class="header-container">
+            <img class="logo" src="../img/logo.png" alt="logo">
+            <div class="nav-left">
+                <a href="../login.html">Ingresar</a>
+                <a href="../carrito.html">Carrito</a>
+            </div>
+            <div class="nav-center">
+                <input id="input-search-products" type="text" placeholder="Buscar productos">
+                <nav class="nav-header">
+                    <ul>
+                        <li><a href="../perros.html">Perros</a></li>
+                        <li><a href="../gatos.html">Gatos</a></li>
+                        <li><a href="../ofertas.html">Ofertas</a></li>
+                        <li><a href="../contact.html" class="nav-contacto">Contacto</a></li>
+                    </ul>
+                </nav>
+            </div>
+        </div>
+    </header>
+
+    <main class="container">
+        <h1>Editar producto</h1>
+        <div class="table-wrapper">
+            <form onsubmit="updateSubmit(event)" class="edit-form">
+                <table class="styled-table">
+                    <tbody>
+                        <tr>
+                            <td><label for="product-title">Nombre</label></td>
+                            <td><input type="text" id="product-title" required></td>
+                        </tr>
+                        <tr>
+                            <td><label for="product-price">Precio</label></td>
+                            <td><input type="number" id="product-price" required></td>
+                        </tr>
+                        <tr>
+                            <td><label for="product-category">Categoría</label></td>
+                            <td><input type="text" id="product-category" required></td>
+                        </tr>
+                        <tr>
+                            <td><label for="product-image">Imagen (URL)</label></td>
+                            <td><input type="text" id="product-image"></td>
+                        </tr>
+                        <tr>
+                            <td><label for="product-description">Descripción</label></td>
+                            <td><textarea id="product-description" rows="4"></textarea></td>
+                        </tr>
+                        <tr>
+                            <td><label for="product-offert">¿En oferta?</label></td>
+                            <td><input type="checkbox" id="product-offert"></td>
+                        </tr>
+                        <tr>
+                            <td><label for="product-freeShipping">¿Envío gratis?</label></td>
+                            <td><input type="checkbox" id="product-freeShipping"></td>
+                        </tr>
+
+                    </tbody>
+                </table>
+                <div class="form-actions">
+                    <input class="btn-actualizar" type="submit" value="Actualizar producto">
+                </div>
+            </form>
+        </div>
+    </main>
+
+    <footer>
+        <p>&copy; 2025 Tienda de Mascotas. Todos los derechos reservados.</p>
+        <a href="../contact.html">Contacto</a>
+    </footer>
+
+    <script src="../scripts/api.js"></script>
+    <script src="../scripts/edit-product.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+
+</body>
+
+</html>

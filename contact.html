@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contacto</title>
+    <link rel="stylesheet" href="styles/styles.css">
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+</head>
+
+<body>
+    <header>
+        <div class="header-container">
+            <img class="logo" src="img/logo.png" alt="logo">
+            <div class="nav-left">
+                <a href="login.html">Ingresar</a>
+                <a href="carrito.html">Carrito</a>
+            </div>
+
+            <div class="nav-center">
+                <input id="input-search-products" type="text" placeholder="Buscar productos">
+                <nav class="nav-header">
+                    <ul>
+                        <li><a href="index.html">Inicio</a></li>
+                        <li><a href="perros.html">Perros</a></li>
+                        <li><a href="gatos.html">Gatos</a></li>
+                        <li><a href="ofertas.html">Ofertas</a></li>
+                        <li><a href="contact.html" class="nav-contacto">Contacto</a></li>
+                    </ul>
+                </nav>
+            </div>
+
+            <div class="hamburger" id="hamburger">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+        </div>
+    </header>
+
+    <main>
+        <h2>Contacto</h2>
+        <form onsubmit="enviarConsulta(event)" action="https://formspree.io/f/xanbqqqj" method="POST" class="form-contacto">
+            <label for="nombre">Nombre:</label>
+            <input type="text" name="nombre" class="form_input" required placeholder="Escribí tu nombre">
+
+            <label for="email">Correo electrónico:</label>
+            <input type="email" name="email" class="form_input" required placeholder="tucorreo@ejemplo.com">
+
+            <label for="mensaje">Mensaje:</label>
+            <textarea name="mensaje" class="form_input" required placeholder="Escribí tu consulta..."></textarea>
+
+            <input type="submit" value="Enviar">
+        </form>
+    </main>
+
+    <footer>
+        <p>&copy; 2025 Tienda de Mascotas. Todos los derechos reservados.</p>
+        <a href="contact.html">Contacto</a>
+    </footer>
+
+    <script>
+        const hamburger = document.querySelector('.hamburger');
+        const navMenu = document.querySelector('.nav-header ul');
+
+        hamburger.addEventListener('click', () => {
+            navMenu.classList.toggle('active');
+        });
+    </script>
+
+    <script src="scripts/api.js"></script>
+    <script src="scripts/contact.js"></script>
+</body>
+
+</html>
