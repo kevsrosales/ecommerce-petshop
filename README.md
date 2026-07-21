@@ -22,3 +22,7 @@ Este Frontend está programado para comunicarse directamente mediante peticiones
 1. **Peticiones GET:** Cuando el catálogo o el administrador se cargan, JavaScript solicita la lista actualizada de artículos al backend.
 2. **Peticiones POST:** Al presionar "Realizar Pedido Final", el archivo `carrito.js` emite una solicitud estructurada al servidor con la lista de IDs comprados y sus cantidades respectivas para que el servidor procese el stock y calcule el total real.
 3. **Peticiones DELETE:** Al eliminar un producto desde la tabla de administración, se envía el ID del artículo al backend para removerlo permanentemente de la base de datos de MySQL.
+
+### Muestras del funcionamiento:
+* https://www.youtube.com/watch?v=Nb0YaW-j9mg
+* https://youtu.be/2rZ-yJ072h4
